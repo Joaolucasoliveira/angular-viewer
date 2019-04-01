@@ -1,0 +1,8 @@
+.navigationBar{
+  display: inline-block;
+}
+
+.navigationBar app-thumbnail + app-thumbnail{
+
+  margin-left: 1px;
+}
