@@ -10,8 +10,8 @@ export class PageRendererService {
 
   }
 
-  renderDocument() {
-
+  renderDocument(file: File): Page[] {
+     return [{pageNumber: 1}, {pageNumber: 2} ];
   }
 
   renderPage() {

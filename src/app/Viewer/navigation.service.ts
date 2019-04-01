@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core'
 import { PageRendererService } from './page-renderer.service'
 import { BehaviorSubject, Observable } from 'rxjs'
 import { Page } from './page'
+import { File } from './file'
 
 @Injectable({
   providedIn: "root"
@@ -36,10 +37,10 @@ export class NavigationService {
   }
 
   goToPage(pageNumber: number) {
-    this.pageRenderer.renderDocument();
+    //this.pageRenderer.renderDocument();
   }
 
-  addFile(){
+  addFile(file: File) {
     this.pageRenderer.renderDocument();
   }
 }
