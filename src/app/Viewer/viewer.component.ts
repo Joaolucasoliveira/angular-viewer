@@ -9,7 +9,6 @@ import { NavigationService } from './navigation.service'
 })
 export class ViewerComponent implements OnInit {
   @Input() files: File[] = []
-
   @ViewChild('canvasDoc') canvasRef: ElementRef;
 
   constructor(private navigationService: NavigationService) {
@@ -18,7 +17,9 @@ export class ViewerComponent implements OnInit {
 
   ngOnInit() {
     this.navigationService.selectedPage$.subscribe(page => {
-      console.log(page.pageNumber);
+      console.log(page);
     });
+
+    this.navigationService.nextPage();
   }
 }

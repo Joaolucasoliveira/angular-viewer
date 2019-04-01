@@ -1,4 +1,5 @@
 import {Component} from '@angular/core'
+import {NavigationService} from '../Viewer/navigation.service'
 
 @Component({
   selector: 'app-viewer-navBar',
@@ -6,7 +7,7 @@ import {Component} from '@angular/core'
   styleUrls: ['./navigation-bar.component.css']
 })
 export class NavigationBarComponent{
-  constructor(){
+  constructor(private navigationService: NavigationService){
 
   }
 
