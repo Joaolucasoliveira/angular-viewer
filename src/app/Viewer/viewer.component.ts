@@ -18,7 +18,10 @@ export class ViewerComponent implements OnInit {
 
   ngOnInit() {
     this.context = (<HTMLCanvasElement>this.canvasRef.nativeElement).getContext('2d');
-    this.navigationService.addFile(new File());
+
+    for (let i = 0; i < this.files.length; i++) {
+      this.navigationService.addFile(this.files[i]);
+    }
 
     this.navigationService.selectedPage$.subscribe(page => {
       this.drawOnCanvas(page);
@@ -29,7 +32,7 @@ export class ViewerComponent implements OnInit {
     if (page != null) {
       var ctx = this.context;
       var image = new Image();
-      image.src = "https://dummyimage.com/600x400/000/fff";
+      image.src = page.data;
       image.onload = () => {
         this.context.drawImage(image, 0, 0);
       }
