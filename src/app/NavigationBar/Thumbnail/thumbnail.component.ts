@@ -5,7 +5,7 @@ import { Component, Output, EventEmitter } from '@angular/core'
   selector: 'app-thumbnail',
   styleUrls: ['./thumbnail.component.css']
 })
-export class Thumbnail {
+export class ThumbnailComponent {
   @Output() onClick: EventEmitter<any> = new EventEmitter();
 
   constructor() {

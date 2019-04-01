@@ -1,12 +1,12 @@
-import {Component} from '@angular/core'
+import { Component } from '@angular/core'
 
 @Component({
   selector: "app-viewer-navControls",
   templateUrl: "./navigation-controls.component.html",
   styleUrls: ['./navigation-controls.component.css']
 })
-export class NavigationControls{
-  constructor(){
+export class NavigationControlsComponent {
+  constructor() {
 
   }
 }

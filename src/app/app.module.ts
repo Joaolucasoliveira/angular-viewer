@@ -4,13 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { NavigationControls } from './NavigationBar/NavigationControls/navigation-controls.component';
-import { Thumbnail } from './NavigationBar/Thumbnail/thumbnail.component';
-import { NavigationBar } from './NavigationBar/navigation-bar.component';
+import { NavigationControlsComponent } from './NavigationBar/NavigationControls/navigation-controls.component';
+import { ThumbnailComponent } from './NavigationBar/Thumbnail/thumbnail.component';
+import { NavigationBarComponent } from './NavigationBar/navigation-bar.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, NavigationControls, Thumbnail, NavigationBar],
+  declarations: [ AppComponent, HelloComponent, NavigationControlsComponent, ThumbnailComponent, NavigationBarComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
