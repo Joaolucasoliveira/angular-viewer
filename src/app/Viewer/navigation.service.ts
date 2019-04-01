@@ -7,8 +7,8 @@ import { Page } from './page'
 export class NavigationService {
 
   pages: Page[] = [];
+  selectedPage: Page;
 
-  selectedPage
   constructor() {
 
   }
