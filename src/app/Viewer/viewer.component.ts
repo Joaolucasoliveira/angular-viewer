@@ -12,16 +12,25 @@ export class ViewerComponent implements OnInit {
   @ViewChild('canvasDoc') canvasRef: ElementRef;
 
   constructor(private navigationService: NavigationService) {
-
+    
   }
 
   ngOnInit() {
     this.navigationService.addFile(new File());
 
     this.navigationService.selectedPage$.subscribe(page => {
-      console.log(page);
+      this.drawOnCanvas(page);
     });
 
     this.navigationService.nextPage();
+  }
+
+  drawOnCanvas(page) {
+
+    if (page != null) {
+      //var ctx = this.canvasRef.getContext('2d');
+      //ctx.drawImage(img, 0, 0);
+    }
+
   }
 }
