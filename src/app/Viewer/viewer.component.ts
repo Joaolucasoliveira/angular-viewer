@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef, OnInit, Input } from '@angular/core';
-import {File} from './file'
+import { File } from './file'
+import { NavigationService } from './navigation.service'
 
 @Component({
   selector: "app-viewer",
@@ -11,11 +12,13 @@ export class ViewerComponent implements OnInit {
 
   @ViewChild('canvasDoc') canvasRef: ElementRef;
 
-  constructor() {
+  constructor(private navigationService: NavigationService) {
 
   }
 
   ngOnInit() {
-    
+    this.navigationService.selectedPage$.subscribe(page => {
+      console.log(page.pageNumber);
+    });
   }
 }
