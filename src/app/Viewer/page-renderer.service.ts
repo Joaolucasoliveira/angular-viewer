@@ -11,14 +11,14 @@ export class PageRendererService {
   }
 
   renderDocument(file: File): Page[] {
-     return [{pageNumber: 1}, {pageNumber: 2} ];
+     return [{pageNumber: 1} ];
   }
 
-  renderPage() {
+  renderPage(page: Page) {
 
   }
 
-  generateThumbnails() {
+  generateThumbnails(pages: Page[]) {
 
   }
 }
