@@ -37,6 +37,7 @@ export class NavigationService {
   }
 
   goToPage(pageNumber: number) {
+    console.log(pageNumber);
     //this.pageRenderer.renderDocument();
   }
 
