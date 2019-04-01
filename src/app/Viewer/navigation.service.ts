@@ -41,6 +41,8 @@ export class NavigationService {
   }
 
   addFile(file: File) {
-    this.pageRenderer.renderDocument();
+
+    //TODO: in fact, we need to add new pages to the pages element
+    this.pages = this.pageRenderer.renderDocument(file);
   }
 }

@@ -1,10 +1,6 @@
 <div class="navigationBar">
 	<div class="thumbnails-list">
-		<app-thumbnail (onClick)="handleThumbnailClick($event)"></app-thumbnail>
-		<app-thumbnail (onClick)="handleThumbnailClick($event)"></app-thumbnail>
-		<app-thumbnail (onClick)="handleThumbnailClick($event)"></app-thumbnail>
-		<app-thumbnail (onClick)="handleThumbnailClick($event)"></app-thumbnail>
-		<app-thumbnail (onClick)="handleThumbnailClick($event)"></app-thumbnail>
+    <app-thumbnail *ngFor="let page of navigationService.pages" (onClick)="handleThumbnailClick($event)"></app-thumbnail>
 	</div>
 
 	<app-viewer-navControls></app-viewer-navControls>

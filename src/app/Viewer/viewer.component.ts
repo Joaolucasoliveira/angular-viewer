@@ -16,6 +16,8 @@ export class ViewerComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.navigationService.addFile(new File());
+
     this.navigationService.selectedPage$.subscribe(page => {
       console.log(page);
     });

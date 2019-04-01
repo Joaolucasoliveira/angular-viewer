@@ -1,4 +1,5 @@
-import { Component, Output, EventEmitter } from '@angular/core'
+import { Component, Output, EventEmitter, Input } from '@angular/core'
+import { Page } from '../../Viewer/page'
 
 @Component({
   templateUrl: './thumbnail.component.html',
@@ -6,6 +7,7 @@ import { Component, Output, EventEmitter } from '@angular/core'
   styleUrls: ['./thumbnail.component.css']
 })
 export class ThumbnailComponent {
+  @Input() page: Page
   @Output() onClick: EventEmitter<any> = new EventEmitter();
 
   constructor() {
@@ -13,6 +15,6 @@ export class ThumbnailComponent {
   }
 
   handleClick() {
-    this.onClick.emit(null);
+    this.onClick.emit(this.page);
   }
 }
