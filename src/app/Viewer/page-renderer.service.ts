@@ -12,11 +12,11 @@ export class PageRendererService {
 
   renderDocument(file: File): Page[] {
     //Build the pages objects based on the file.
-     return [{pageNumber: 1, data: file.data} ];
+    return [{ pageNumber: 1, thumbnailData: "", data: file.data }];
   }
 
   renderPage(page: Page) {
-  
+
   }
 
   generateThumbnails(pages: Page[]) {
