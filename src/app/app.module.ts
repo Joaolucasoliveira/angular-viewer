@@ -7,10 +7,11 @@ import { HelloComponent } from './hello.component';
 import { NavigationControlsComponent } from './NavigationBar/NavigationControls/navigation-controls.component';
 import { ThumbnailComponent } from './NavigationBar/Thumbnail/thumbnail.component';
 import { NavigationBarComponent } from './NavigationBar/navigation-bar.component';
+import { ViewerComponent } from './Viewer/viewer.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, NavigationControlsComponent, ThumbnailComponent, NavigationBarComponent],
+  declarations: [ AppComponent, HelloComponent, NavigationControlsComponent, ThumbnailComponent, NavigationBarComponent, ViewerComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
