@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { NavigationService } from '../../Viewer/navigation.service'
 
 @Component({
   templateUrl: './thumbnail-navigation.component.html',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core'
 })
 export class ThumbnailNavigationComponent {
 
-  constructor() {
+  constructor(private navigationService: NavigationService) {
 
   }
 }

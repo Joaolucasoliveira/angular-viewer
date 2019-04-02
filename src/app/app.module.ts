@@ -8,10 +8,11 @@ import { NavigationControlsComponent } from './NavigationBar/NavigationControls/
 import { ThumbnailComponent } from './NavigationBar/Thumbnail/thumbnail.component';
 import { NavigationBarComponent } from './NavigationBar/navigation-bar.component';
 import { ViewerComponent } from './Viewer/viewer.component';
+import { ThumbnailNavigationComponent } from './NavigationBar/ThumbnailNavigation/thumbnail-navigation'
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, NavigationControlsComponent, ThumbnailComponent, NavigationBarComponent, ViewerComponent],
-  bootstrap:    [ AppComponent ]
+  imports: [BrowserModule, FormsModule],
+  declarations: [AppComponent, HelloComponent, NavigationControlsComponent, ThumbnailComponent, NavigationBarComponent, ViewerComponent, ThumbnailNavigationComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
