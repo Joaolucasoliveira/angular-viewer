@@ -38,14 +38,18 @@ export class NavigationService {
 
   goToPage(pageNumber: number) {
     console.log(pageNumber);
-    
-    //this.pageRenderer.renderDocument();
+
+    this._selected.next(this.pages[1]);
   }
 
   addFile(file: File) {
 
     //TODO: in fact, we need to add new pages to the pages element
-    this.pages = this.pageRenderer.renderDocument(file);
+    var addedPages = this.pageRenderer.renderDocument(file);
+    for (let i = 0; i < addedPages.length; i++) {
+      this.pages.push(addedPages[i]);
+    }
+
     this._selected.next(this.pages[0]);
   }
 }
