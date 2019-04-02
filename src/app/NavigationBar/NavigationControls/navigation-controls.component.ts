@@ -8,6 +8,8 @@ import { Component, Output, EventEmitter } from '@angular/core'
 export class NavigationControlsComponent {
   @Output() nextClick: EventEmitter<any> = new EventEmitter();
   @Output() previousClick: EventEmitter<any> = new EventEmitter();
+  @Output() firstPageClick: EventEmitter<any> = new EventEmitter();
+  @Output() lastPageClick: EventEmitter<any> = new EventEmitter();
   
   constructor() {
 
@@ -19,5 +21,13 @@ export class NavigationControlsComponent {
 
   handlePreviousClick() {
     this.previousClick.emit(null);
+  }
+
+   handleFirstPageClick() {
+    this.firstPageClick.emit(null);
+  }
+
+  handleLastPageClick() {
+    this.lastPageClick.emit(null);
   }
 }
