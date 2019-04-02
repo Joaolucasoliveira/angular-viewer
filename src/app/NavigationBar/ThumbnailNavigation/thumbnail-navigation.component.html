@@ -1,16 +1,4 @@
 <div class="thumbnail-navigation">
 	<app-thumbnail *ngFor="let page of navigationService.pages; let i = index" [selected]="navigationService.selectedIndex == i"
 	 (onClick)="handleThumbnailClick(i)"></app-thumbnail>
-	<!-- <ul>
-		<li>
-      <Thumbnail
-			<img src="https://via.placeholder.com/100x150"/>
-				</li>
-        <li>
-          <img src="https://via.placeholder.com/100x150"/>
-				</li>
-        <li>
-          <img src="https://via.placeholder.com/100x150"/>
-				</li>
-			</ul> -->
 </div>

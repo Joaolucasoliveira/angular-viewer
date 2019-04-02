@@ -8,7 +8,7 @@ import { NavigationControlsComponent } from './NavigationBar/NavigationControls/
 import { ThumbnailComponent } from './NavigationBar/Thumbnail/thumbnail.component';
 import { NavigationBarComponent } from './NavigationBar/navigation-bar.component';
 import { ViewerComponent } from './Viewer/viewer.component';
-import { ThumbnailNavigationComponent } from './NavigationBar/ThumbnailNavigation/thumbnail-navigation'
+import { ThumbnailNavigationComponent } from './NavigationBar/ThumbnailNavigation/thumbnail-navigation.component'
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
