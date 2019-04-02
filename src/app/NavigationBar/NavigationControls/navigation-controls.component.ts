@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, Output, EventEmitter } from '@angular/core'
 
 @Component({
   selector: "app-viewer-navControls",
@@ -6,7 +6,18 @@ import { Component } from '@angular/core'
   styleUrls: ['./navigation-controls.component.css']
 })
 export class NavigationControlsComponent {
+  @Output() nextClick: EventEmitter<any> = new EventEmitter();
+  @Output() previousClick: EventEmitter<any> = new EventEmitter();
+  
   constructor() {
 
+  }
+
+  handleNextClick() {
+    this.nextClick.emit(null);
+  }
+
+  handlePreviousClick() {
+    this.previousClick.emit(null);
   }
 }

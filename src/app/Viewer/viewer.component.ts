@@ -31,6 +31,9 @@ export class ViewerComponent implements OnInit {
   drawOnCanvas(page) {
     if (page != null) {
       var ctx = this.context;
+
+      ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
       var image = new Image();
       image.src = page.data;
       image.onload = () => {
