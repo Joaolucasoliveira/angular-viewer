@@ -6,3 +6,17 @@ app-viewer{
   margin-top: 10px;
 }
 
+.menu{
+  height: 50px;
+  width: 100vw;
+  clear: both;
+  background-color:rgb(60, 60, 60);
+}
+
+.sideBar{
+ background-color: rgb(51, 51, 51);
+  height: 100%;
+  width: 50px;
+  float: left;
+  display:flex;
+}
