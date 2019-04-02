@@ -37,6 +37,7 @@ export class NavigationService {
   goToPage(pageIndex: number) {
     console.log(pageIndex);
 
+this.
     this._selected.next(this.pages[pageIndex]);
   }
 

@@ -15,4 +15,12 @@ export class NavigationBarComponent {
   handleThumbnailClick(page) {
     this.navigationService.goToPage(page);
   }
+
+  handleNextClick() {
+    this.navigationService.nextPage();
+  }
+
+  handlePreviousClick() {
+    this.navigationService.previousPage();
+  }
 }
