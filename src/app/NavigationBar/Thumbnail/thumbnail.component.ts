@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, Input } from '@angular/core'
+import { Component, Output, EventEmitter, Input, OnInit } from '@angular/core'
 import { Page } from '../../Viewer/page'
 
 @Component({
@@ -6,8 +6,9 @@ import { Page } from '../../Viewer/page'
   selector: 'app-thumbnail',
   styleUrls: ['./thumbnail.component.css']
 })
-export class ThumbnailComponent {
+export class ThumbnailComponent implements OnInit {
   @Input() page: Page
+  @Input() selected: boolean
   @Output() onClick: EventEmitter<any> = new EventEmitter();
 
   constructor() {
@@ -16,5 +17,9 @@ export class ThumbnailComponent {
 
   handleClick() {
     this.onClick.emit(this.page);
+  }
+
+  ngOnInit() {
+    
   }
 }

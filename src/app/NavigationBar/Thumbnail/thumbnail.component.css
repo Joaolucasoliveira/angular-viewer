@@ -2,3 +2,7 @@
   display: inline-block;
   cursor: pointer;
 }
+
+.thumbnail.selected{
+  border: 2px solid yellow;
+}
