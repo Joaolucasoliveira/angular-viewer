@@ -1,9 +1,4 @@
 <div class="navigationBar">
-	<div class="thumbnails-list">
-		<app-thumbnail *ngFor="let page of navigationService.pages; let i = index" [selected]="navigationService.selectedIndex == i"
-		 (onClick)="handleThumbnailClick(i)"></app-thumbnail>
-	</div>
-
 	<app-viewer-navControls (nextClick)="handleNextClick()" (previousClick)="handlePreviousClick()" (firstPageClick)="handleFirstPageClick()"
 	 (lastPageClick)="handleLastPageClick()"></app-viewer-navControls>
 </div>

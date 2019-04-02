@@ -1,4 +1,9 @@
 <div class="thumbnail-navigation">
-	<app-thumbnail *ngFor="let page of navigationService.pages; let i = index" [selected]="navigationService.selectedIndex == i"
+  <ul>
+    <li *ngFor="let page of navigationService.pages; let i = index" >
+      	<app-thumbnail [selected]="navigationService.selectedIndex == i" [page] = "page"
 	 (onClick)="handleThumbnailClick(i)"></app-thumbnail>
+    </li>
+  </ul>
+
 </div>
