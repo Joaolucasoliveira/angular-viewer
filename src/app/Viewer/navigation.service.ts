@@ -9,6 +9,7 @@ import { File } from './file'
 })
 export class NavigationService {
   pages: Page[] = [];
+  selectedIndex: number;
 
   private _selected: BehaviorSubject<Page> = new BehaviorSubject(null);
   public selectedPage$ = this._selected.asObservable();
@@ -18,28 +19,25 @@ export class NavigationService {
   }
 
   nextPage() {
-    let page = this._selected.getValue();
-    this.goToPage(page.pageNumber + 1);
+    this.goToPage(this.selectedIndex + 1);
   }
 
   previousPage() {
-    let page = this._selected.getValue();
-    this.goToPage(page.pageNumber - 1);
+    this.goToPage(this.selectedIndex - 1);
   }
 
   firstPage() {
-    this.goToPage(1);
+    this.goToPage(0);
   }
 
   lastPage() {
-    let page = this._selected.getValue();
-    this.goToPage(this.pages.length);
+    this.goToPage(this.pages.length - 1);
   }
 
-  goToPage(pageNumber: number) {
-    console.log(pageNumber);
+  goToPage(pageIndex: number) {
+    console.log(pageIndex);
 
-    this._selected.next(this.pages[1]);
+    this._selected.next(this.pages[pageIndex]);
   }
 
   addFile(file: File) {
@@ -50,6 +48,7 @@ export class NavigationService {
       this.pages.push(addedPages[i]);
     }
 
+    this.selectedIndex = 0;
     this._selected.next(this.pages[0]);
   }
 }

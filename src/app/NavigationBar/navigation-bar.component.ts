@@ -13,6 +13,6 @@ export class NavigationBarComponent {
   }
 
   handleThumbnailClick(page) {
-    this.navigationService.goToPage(page.pageNumber);
+    this.navigationService.goToPage(page);
   }
 }
