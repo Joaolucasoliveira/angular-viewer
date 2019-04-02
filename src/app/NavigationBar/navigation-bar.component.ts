@@ -23,4 +23,12 @@ export class NavigationBarComponent {
   handlePreviousClick() {
     this.navigationService.previousPage();
   }
+
+  handleFirstPageClick() {
+    this.navigationService.firstPage();
+  }
+
+  handleLastPageClick() {
+    this.navigationService.lastPage();
+  }
 }

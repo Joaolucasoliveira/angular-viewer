@@ -35,15 +35,16 @@ export class NavigationService {
   }
 
   goToPage(pageIndex: number) {
-    console.log(pageIndex);
+    if (pageIndex < 0)
+      pageIndex = this.pages.length - 1;
+    else if (pageIndex > this.pages.length - 1)
+      pageIndex = 0;
 
-this.
+    this.selectedIndex = pageIndex;
     this._selected.next(this.pages[pageIndex]);
   }
 
   addFile(file: File) {
-
-    //TODO: in fact, we need to add new pages to the pages element
     var addedPages = this.pageRenderer.renderDocument(file);
     for (let i = 0; i < addedPages.length; i++) {
       this.pages.push(addedPages[i]);

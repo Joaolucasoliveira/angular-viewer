@@ -3,5 +3,5 @@
     <app-thumbnail *ngFor="let page of navigationService.pages; let i = index" (onClick)="handleThumbnailClick(i)"></app-thumbnail>
 	</div>
 
-	<app-viewer-navControls (nextClick)="handleNextClick()" (previousClick)="handlePreviousClick()" (firstPage)="handleFirstPageClick()" (lastPage)="handleLastPageClick()"></app-viewer-navControls>
+	<app-viewer-navControls (nextClick)="handleNextClick()" (previousClick)="handlePreviousClick()" (firstPageClick)="handleFirstPageClick()" (lastPageClick)="handleLastPageClick()"></app-viewer-navControls>
 </div>
