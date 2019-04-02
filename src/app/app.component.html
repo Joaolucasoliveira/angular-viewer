@@ -1,14 +1,31 @@
-<div class="menu">
-</div>
+<main>
+	<nav class="menu">
+	</nav>
 
-<div class="sideBar">
-</div>
-<div class="container-fluid">
+	<div class="viewerBody">
+		<div class="sideBar">
+			<ul>
+				<li>
+					<i class="fas fa-folder-plus"></i>
+          </li>
+      </ul>
+		</div>
+		<div class="sideBar-thumbNav">
+			<ul>
+				<li>
+          <img src="https://via.placeholder.com/100x150"/>
+				</li>
+        <li>
+          <img src="https://via.placeholder.com/100x150"/>
+				</li>
+        <li>
+          <img src="https://via.placeholder.com/100x150"/>
+				</li>
+			</ul>
+		</div>
 
-
-
-
-	<div class="row justify-content-md-center">
-		<app-viewer [files]="mockFiles"></app-viewer>
+		<div class="viewerWrapper">
+			<app-viewer [files]="mockFiles"></app-viewer>
+		</div>
 	</div>
-</div>
+</main>
